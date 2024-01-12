@@ -16,9 +16,9 @@ acme_certificate_dir: acme_certificate
 
 #Example dns-01 create a wildcard
 #
-#acme_method: dns-01
-#acme_domain: example.com
-#acme_account_email: test@example.com
-#bind:
-# server: 10.10.10.10
+acme_method: dns-01
+acme_domain: example.com
+acme_account_email: test@example.com
+bind:
+ server: 10.10.10.10
 
