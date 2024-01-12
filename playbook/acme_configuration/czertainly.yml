@@ -1,0 +1,24 @@
+acme_directory: "https://czertainly.local/api/v1/protocols/acme/ACME_WebServers/directory"
+acme_version: 2
+acme_revoke: false
+acme_register_account: true
+bind: "{{ lookup('file', 'acme_configuration/czertainly.private') | from_yaml }}"
+#
+#Certificate Directory
+acme_certificate_dir: acme_certificate
+ 
+#Configure only one type of acme_method
+#
+#Example http-01 create certificate for acme_domain
+#
+#acme_method: http-01
+#acme_domain: www.example.com
+#acme_account_email: test@example.com
+
+#Example dns-01 create a wildcard
+#
+#acme_method: dns-01
+#acme_domain: example.com
+#acme_account_email: test@example.com
+#bind:
+# server: 10.10.10.10

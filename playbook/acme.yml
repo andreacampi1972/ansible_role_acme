@@ -1,0 +1,6 @@
+---
+- name: Let's encrypt Ansible ACME 
+  hosts: localhost
+
+  roles:
+    - acme
