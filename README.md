@@ -1,21 +1,17 @@
 # ansible_role_acme
 
-Ansible role to manage acme certificate
-Use example in palybook directory to configure the generation of certificates 
-Configure your acme_certificate_dir for me is
+Ansible role to manage acme certificate, use example in playbook directory to configure the generation of certificates 
+Configure your acme_certificate_dir
 ```
 #Certificate Directory
 acme_certificate_dir: acme_certificate
 ```
-and select only one from dns-01 od http-01
+and select only one acme_method dns-01 or http-01
 
 ## Example with Let's Encrypt
 ```
 ansible-playbook -e @acme_configuration/lets-encrypt-staging.yml acme.yml
 ```
-This will try to create certificate with `cn=microsoft.com` and `subjAltNames=['microsoft.com', 'www.microsoft.com']` and it will fail during challenge creation with error `The ACME server refuses to issue a certificate for this domain name, because it is forbidden by policy`.
-
-Try it with hostname of system you are executing playbook on, if you are running HTTP server.
 
 ## Example with ZeroSSL
 ```
